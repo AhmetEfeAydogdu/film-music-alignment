@@ -20,8 +20,6 @@ Analytical Relevance: Quantitative study of film-music interplay fills a gap in 
 
 Practical Application: Understanding how musical properties correlate with film success could inform creative decisions in film production and scoring.
 
-Educational Value: The project integrates data cleaning, visualization, statistical inference, and machine learning—aligning with DSA210 learning outcomes.
-
 ### Dataset
 
 IMDb Movie Dataset (Kaggle): Contains film attributes such as title, year, genre, runtime, vote_average, popularity.
