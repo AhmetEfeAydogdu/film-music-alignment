@@ -1,55 +1,53 @@
-# Film–Soundtrack Popularity Relationship Analysis
+# Netflix Content Analysis
 
-This project looks at whether popular films also tend to have popular soundtrack tracks. Using publicly available Kaggle datasets for both movies and Spotify songs, the goal is to combine the two and see if there is a noticeable connection between a film’s popularity and the popularity of the music linked to it.
+## Description
+This project looks at how Netflix’s content library has changed over time, focusing on the difference between Movies and TV Shows.  
+The main idea is to see whether Netflix has been adding more TV Shows compared to Movies as the years go by.
 
----
-
-## Problem Definition
-
-Films and soundtrack tracks each have their own popularity metrics.  
-Here, the main question is:
-
-**“Do films with higher popularity scores also have more popular soundtrack songs?”**
-
-To explore this, film metadata and Spotify track data are matched and compared.
+The dataset used in this project comes from Kaggle:  
+https://www.kaggle.com/datasets/shivamb/netflix-shows
 
 ---
 
-## Why This is Interesting
+## Research Question & Hypothesis
+**Research Question:**  
+How has the balance between Movies and TV Shows changed over the years on Netflix?
 
-Soundtracks are a big part of a film’s identity. Some movies become memorable largely because of their music, while some songs gain popularity thanks to the film they appear in.
+**H₀ (Null Hypothesis):**  
+There is no meaningful difference in the number of Movies and TV Shows released over the years.
 
-Checking how film success and soundtrack success align together can give simple but meaningful insights into how the two areas influence each other.
+**H₁ (Alternative Hypothesis):**  
+As years increase, Netflix releases more TV Shows compared to Movies.
 
----
-
-## Methodology
-
-1. **Data Collection:**  
-   Film data is taken from Kaggle (TMDB-based datasets).  
-   Track data comes from large Spotify datasets on Kaggle.
-
-2. **Matching:**  
-   Films and related soundtrack tracks are paired using title-based matching.
-
-3. **Features:**  
-   - Film: popularity, release year, budget.  
-   - Tracks: popularity, tempo, energy, valence, etc.
-
-4. **Analysis:**  
-   Basic correlation checks and regression models are used to see how strongly film popularity relates to soundtrack popularity.
+This hypothesis will be examined using simple exploratory data analysis, yearly content counts, and trend-based comparisons.
 
 ---
 
-## Expected Outcomes
-
-- A clearer view of whether film popularity aligns with soundtrack popularity.  
-- Simple visualizations showing the relationship between film features and music features.  
-- A combined dataset linking films with the tracks associated with them.
+## Features
+- Yearly distribution of Movies and TV Shows  
+- Movie vs TV Show counts and comparisons  
+- Plots showing how content types change over time  
+- Duration and season information cleaned into numeric form  
+- Basic hypothesis testing based on yearly trends  
 
 ---
 
-## Notes
+## How It Works
+The dataset includes information such as title type, release year, rating, country, duration, and genres.  
+The project begins by reading the dataset, cleaning the required columns, and separating Movies and TV Shows.
 
-All data comes from open Kaggle datasets.  
-No video or audio files are used—only metadata.
+The main steps include:
+- Counting how many Movies and TV Shows appear each year
+- Visualizing the trend over time
+- Checking whether TV Shows have increased faster than Movies
+- Preparing cleaned variables for further analysis and testing
+
+No complex preprocessing is needed for this stage.
+
+---
+
+## Technologies Used
+- Python  
+- pandas  
+- matplotlib  
+- seaborn  
